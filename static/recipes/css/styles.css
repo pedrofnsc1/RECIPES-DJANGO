@@ -79,6 +79,7 @@ a {
   text-decoration: none;
 }
 
+/*HEADER.HTML CSS START*/
 .container {
   max-width: 144rem;
   margin: 0 auto;
@@ -104,7 +105,9 @@ a {
 .main-logo-icon {
   margin-right: 2rem;
 }
+/*HEADER.HTML CSS END*/
 
+/*SEARCH.HTML CSS START*/
 .search-form {
   border: 0.2rem solid var(--color-primary-dark);
   max-width: 64rem;
@@ -157,7 +160,9 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: var(--spacing-gutter-large);
 }
+/*SEARCH.HTML CSS END*/
 
+/*RECIPE.HTML CSS END*/
 .recipe {
   background: var(--color-white);
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
@@ -260,10 +265,24 @@ a {
   box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/*RECIPE-VIEW.HTML CSS START*/
+.main-content-detail .recipe-list-item {
+  max-width: 84rem;
+  margin: 0 auto;
+}
+
+.main-content-detail .recipe-list-item:hover {
+  transform: scale(1);
+  box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*RECIPE-VIEW.HTML CSS END*/
+ 
+/*RECIPE.HTML CSS END*/
 .preparation-steps {
   padding: var(--spacing-gutter-medium);
 }
 
+/*FOOTER.HTML CSS START*/
 .main-footer {
   display: flex;
   align-items: center;
@@ -282,3 +301,5 @@ a {
 .main-footer a:hover {
   filter: brightness(0.8);
 }
+/*FOOTER.HTML CSS END*/
+
