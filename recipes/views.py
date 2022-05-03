@@ -1,13 +1,16 @@
 from django.shortcuts import render
 
+from __localcode.main import make_recipe
+
 
 def home(request):
     return render(request, 'recipes/pages/home.html', context={
-        'message': 'This is your home now'
+        'recipes': [make_recipe() for _ in range(9)],
     })
 
 
 def recipe(request, id):
     return render(request, 'recipes/pages/recipe-view.html', context={
-        'message': 'This is your home now'
+        'recipe': make_recipe(),
+        'is_detail_page': True, 
     })
