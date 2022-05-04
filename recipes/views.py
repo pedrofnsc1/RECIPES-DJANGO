@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-from __localcode.main import make_recipe
-
+#from __localcode.main import make_recipe
+from utils.recipes.factory import make_recipe
 
 def home(request):
     return render(request, 'recipes/pages/home.html', context={

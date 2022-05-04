@@ -197,7 +197,7 @@ a {
 }
 
 .recipe-author {
-  padding: 0 var(--spacing-gutter-medium);
+  padding: 0 var(--spacing-gutter-medium); 
 }
 
 .recipe-content {
