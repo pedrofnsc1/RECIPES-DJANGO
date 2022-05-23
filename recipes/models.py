@@ -3,6 +3,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Category(models.Model):
     name = models.CharField(max_length=65, help_text='enter your category name')
 
@@ -15,7 +16,7 @@ class Recipe(models.Model):
     description = models.CharField(max_length=150, help_text='A brief description about the recipe')
     slug = models.SlugField(help_text='recipe title with - between de words, ex: the-recipe-title-goes-here')
     preparation_time = models.IntegerField(help_text='in minutes')
-    preparation_time_unit = models.CharField(max_length=65, help_text='minutes or hours')
+    preparation_time_unit = models.CharField(max_length=65, help_text='minutes and hours')
     servings = models.IntegerField()
     servings_unit = models.CharField(max_length=20)
     preparation_steps = models.TextField()
@@ -23,7 +24,7 @@ class Recipe(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=False)
-    cover = models.ImageField(upload_to='recipes/covers/%Y/%m/%d/')
+    cover = models.ImageField(upload_to='recipes/covers/%Y/%m/%d/', blank=True, default='')
 
     # My Foreign key #
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
